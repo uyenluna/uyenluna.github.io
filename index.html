@@ -1,213 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Luna Nguyen | Portfolio</title>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&family=Source+Sans+3:wght@400;500&display=swap" rel="stylesheet">
-
 <link rel="stylesheet" href="style.css">
-
+<script defer src="script.js"></script>
 </head>
-
 <body>
-
-<div class="layout">
-
+<div id="boot"><pre>INITIALIZING SYSTEM...
+Loading Portfolio...
+STATUS: ONLINE</pre></div>
+<div class="pcb-bg"></div>
+<div class="layout hidden">
 <aside class="sidebar">
-
+<img class="avatar" src="assets/profile/profile.jpg" alt="Profile photo">
 <h1>Luna Nguyen</h1>
-
-<p class="subtitle">
-Computer Systems Engineering<br>
-Arizona State University
-</p>
-
-<div class="status">
-
-<div>
-<span>Focus</span>
-<p>Embedded Systems<br>FPGA • Machine Learning</p>
-</div>
-
-<div>
-<span>Graduation</span>
-<p>May 2027</p>
-</div>
-
-</div>
-
+<p>Computer Systems Engineering<br>Arizona State University</p>
+<a class="btn" href="assets/resume/Luna_Nguyen_Resume.pdf" target="_blank">Resume</a>
 <nav>
-
 <a href="#about">About</a>
-
 <a href="#projects">Projects</a>
-
+<a href="#research">Research</a>
 <a href="#skills">Skills</a>
-
 <a href="#contact">Contact</a>
-
 </nav>
-
-<div class="links">
-
-<a href="#">GitHub</a>
-
-<a href="#">LinkedIn</a>
-
-<a href="#">Resume</a>
-
-<a href="mailto:your.email@asu.edu">Email</a>
-
-</div>
-
+<p><strong>Replace photo:</strong><br>assets/profile/profile.jpg</p>
 </aside>
-
 <main>
-
-<section id="about">
-
-<h2>About</h2>
-
-<p>
-I work at the intersection of hardware and machine learning, where software
-meets real-world deployment. My recent work includes FPGA design, embedded
-systems, PCB development, and deep learning for agricultural image
-segmentation.
-</p>
-
+<section id="about"><h2>About</h2><p>Edit this section with your bio.</p></section>
+<section id="projects"><h2>Featured Projects</h2>
+<div class="card"><h3>Hydrophone PCB</h3><p>Description...</p>
+<div class="proofs">
+<a href="assets/projects/hydrophone/">Photos</a>
+<a href="assets/projects/hydrophone/schematic.pdf">Schematic</a>
+<a href="#">GitHub</a>
+</div></div>
 </section>
-
-<section id="projects">
-
-<h2>Projects</h2>
-
-<div class="project">
-
-<h3>Hydrophone PCB Redesign</h3>
-
-<p class="meta">
-Desert WAVE • Electrical Team
-</p>
-
-<p>
-Redesigned the hydrophone PCB for ASU's autonomous underwater vehicle,
-including schematic capture, PCB layout, and hardware verification.
-</p>
-
-</div>
-
-<div class="project">
-
-<h3>Agricultural Field Segmentation</h3>
-
-<p class="meta">
-FURI Research • Kerner Lab
-</p>
-
-<p>
-Developing a U-Net segmentation model for agricultural field boundary
-detection using satellite imagery.
-</p>
-
-</div>
-
-<div class="project">
-
-<h3>Robotic Arm Object Detection</h3>
-
-<p class="meta">
-FURI Research
-</p>
-
-<p>
-CNN-based object detection pipeline reaching approximately 87% accuracy for
-robotic pick-and-place applications.
-</p>
-
-</div>
-
-</section>
-
-<section id="skills">
-
-<h2>Skills</h2>
-
-<div class="skills">
-
-<div>
-
-<h4>Embedded</h4>
-
-<p>C • ARM Cortex-M0+</p>
-
-</div>
-
-<div>
-
-<h4>FPGA</h4>
-
-<p>Verilog • Vivado</p>
-
-</div>
-
-<div>
-
-<h4>Machine Learning</h4>
-
-<p>PyTorch • TensorFlow • OpenCV</p>
-
-</div>
-
-<div>
-
-<h4>PCB</h4>
-
-<p>EasyEDA • JLCPCB</p>
-
-</div>
-
-</div>
-
-</section>
-
-<section id="contact">
-
-<h2>Contact</h2>
-
-<p>
-
-Email:
-<a href="mailto:your.email@asu.edu">your.email@asu.edu</a>
-
-</p>
-
-<p>
-
-GitHub:
-<a href="#">github.com/yourusername</a>
-
-</p>
-
-<p>
-
-LinkedIn:
-<a href="#">linkedin.com/in/yourusername</a>
-
-</p>
-
-</section>
-
+<section id="research"><h2>Research</h2><p>FURI / Kerner Lab...</p></section>
+<section id="skills"><h2>Skills</h2><div class="chips"><span>FPGA</span><span>Embedded</span><span>ML</span><span>PCB</span></div></section>
+<section id="contact"><h2>Contact</h2><p>Email • GitHub • LinkedIn</p></section>
 </main>
-
 </div>
-
-</body>
-
-</html>
+</body></html>
