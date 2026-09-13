@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Luna Nguyen — Computer Systems Engineer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&family=Source+Sans+3:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="grid-overlay" aria-hidden="true"></div>
+
+<header class="datasheet-header">
+  <div class="wrap">
+    <div class="header-top">
+      <span class="doc-id">DOC — LN/2026</span>
+      <span class="doc-status status-active">STATUS: ACTIVE</span>
+    </div>
+    <h1>Luna Nguyen</h1>
+    <p class="subtitle">Computer Systems Engineering · Arizona State University</p>
+    <div class="spec-row">
+      <div class="spec">
+        <span class="spec-label">Focus</span>
+        <span class="spec-value">Embedded systems, FPGA/RTL, ML for vision</span>
+      </div>
+      <div class="spec">
+        <span class="spec-label">Currently</span>
+        <span class="spec-value">FURI researcher, Kerner Lab</span>
+      </div>
+      <div class="spec">
+        <span class="spec-label">Graduating</span>
+        <span class="spec-value">May 2027</span>
+      </div>
+    </div>
+    <nav class="header-nav">
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section id="about" class="about">
+    <div class="section-label">01 — About</div>
+    <p class="lede">
+      I work at the intersection of hardware and machine learning — where a model
+      only matters once it fits the silicon, the timing budget, or the field
+      conditions it's actually deployed in. Recent work spans RTL design on FPGAs,
+      CNN-based object detection, and agricultural image segmentation research.
+    </p>
+  </section>
+
+  <section id="projects" class="projects">
+    <div class="section-label">02 — Projects</div>
+
+    <article class="project">
+      <div class="project-id">PROJ-001</div>
+      <div class="project-body">
+        <h3>Agricultural Field Boundary Segmentation</h3>
+        <p class="project-meta">FURI Research · Kerner Lab · Fall 2026 · In progress</p>
+        <p>
+          Data-efficient segmentation of agricultural field boundaries using a
+          U-Net architecture, trained on the Fields of the World (FTW) dataset.
+          Advised by Dr. Hannah Kerner. Motivated by applications in food security
+          and remote sensing.
+        </p>
+        <ul class="tag-list">
+          <li>U-Net</li><li>PyTorch</li><li>Remote sensing</li><li>Segmentation</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="project">
+      <div class="project-id">PROJ-002</div>
+      <div class="project-body">
+        <h3>Robotic Arm Object Detection</h3>
+        <p class="project-meta">FURI Research · Spring 2025 · Complete — 87% accuracy</p>
+        <p>
+          Built a computer vision pipeline for a robotic arm to detect and classify
+          objects for pick-and-place tasks, reaching ~87% detection accuracy.
+          Combined classical CV preprocessing with a CNN-based classifier.
+        </p>
+        <ul class="tag-list">
+          <li>OpenCV</li><li>TensorFlow</li><li>CNNs</li><li>Robotics</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="project">
+      <div class="project-id">PROJ-003</div>
+      <div class="project-body">
+        <h3>FPGA / RTL Design Work</h3>
+        <p class="project-meta">Coursework &amp; independent projects · Verilog</p>
+        <p>
+          Digital design projects implemented in Verilog and synthesized on a
+          Nexys A7 board via Xilinx Vivado, covering register-level design,
+          timing closure, and hardware verification fundamentals.
+        </p>
+        <ul class="tag-list">
+          <li>Verilog</li><li>Xilinx Vivado</li><li>Nexys A7</li><li>Digital design</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="project">
+      <div class="project-id">PROJ-004</div>
+      <div class="project-body">
+        <h3>Embedded Control on ARM Cortex-M0+</h3>
+        <p class="project-meta">Coursework · Bare-metal C</p>
+        <p>
+          Register-level, bare-metal firmware on ARM Cortex-M0+, including a PID
+          control loop implemented without an RTOS or HAL abstraction layer.
+        </p>
+        <ul class="tag-list">
+          <li>C</li><li>Bare-metal</li><li>PID control</li><li>Cortex-M0+</li>
+        </ul>
+      </div>
+    </article>
+
+  </section>
+
+  <section id="skills" class="skills">
+    <div class="section-label">03 — Skills</div>
+    <div class="skills-grid">
+      <div class="skill-group">
+        <h4>Embedded</h4>
+        <p>ARM Cortex-M0+ · bare-metal C · register-level programming · PID control</p>
+      </div>
+      <div class="skill-group">
+        <h4>FPGA / RTL</h4>
+        <p>Verilog · Xilinx Vivado · Nexys A7 · hardware verification</p>
+      </div>
+      <div class="skill-group">
+        <h4>ML / Computer Vision</h4>
+        <p>PyTorch · TensorFlow · OpenCV · CNNs · U-Net</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="section-label">04 — Contact</div>
+    <p>
+      Email — <a href="mailto:your.email@asu.edu">your.email@asu.edu</a><br>
+      GitHub — <a href="https://github.com/yourhandle" target="_blank" rel="noopener">github.com/yourhandle</a><br>
+      LinkedIn — <a href="https://linkedin.com/in/yourhandle" target="_blank" rel="noopener">linkedin.com/in/yourhandle</a>
+    </p>
+  </section>
+
+</main>
+
+<footer class="wrap">
+  <span>Last updated 2026</span>
+</footer>
+
+</body>
+</html>
