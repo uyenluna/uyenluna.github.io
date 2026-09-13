@@ -1,45 +1,106 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Luna Nguyen | Portfolio</title>
-<link rel="stylesheet" href="style.css">
-<script defer src="script.js"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#07110d">
+  <meta name="description" content="Luna Nguyen — Computer Systems Engineering portfolio: embedded systems, FPGA, PCB design, machine learning, computer architecture and robotics.">
+  <title>Luna Nguyen | Computer Systems Engineer</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
 </head>
 <body>
-<div id="boot"><pre>INITIALIZING SYSTEM...
-Loading Portfolio...
-STATUS: ONLINE</pre></div>
-<div class="pcb-bg"></div>
-<div class="layout hidden">
-<aside class="sidebar">
-<img class="avatar" src="assets/profile/profile.jpg" alt="Profile photo">
-<h1>Luna Nguyen</h1>
-<p>Computer Systems Engineering<br>Arizona State University</p>
-<a class="btn" href="assets/resume/Luna_Nguyen_Resume.pdf" target="_blank">Resume</a>
-<nav>
-<a href="#about">About</a>
-<a href="#projects">Projects</a>
-<a href="#research">Research</a>
-<a href="#skills">Skills</a>
-<a href="#contact">Contact</a>
-</nav>
-<p><strong>Replace photo:</strong><br>assets/profile/profile.jpg</p>
-</aside>
-<main>
-<section id="about"><h2>About</h2><p>Edit this section with your bio.</p></section>
-<section id="projects"><h2>Featured Projects</h2>
-<div class="card"><h3>Hydrophone PCB</h3><p>Description...</p>
-<div class="proofs">
-<a href="assets/projects/hydrophone/">Photos</a>
-<a href="assets/projects/hydrophone/schematic.pdf">Schematic</a>
-<a href="#">GitHub</a>
-</div></div>
-</section>
-<section id="research"><h2>Research</h2><p>FURI / Kerner Lab...</p></section>
-<section id="skills"><h2>Skills</h2><div class="chips"><span>FPGA</span><span>Embedded</span><span>ML</span><span>PCB</span></div></section>
-<section id="contact"><h2>Contact</h2><p>Email • GitHub • LinkedIn</p></section>
-</main>
-</div>
-</body></html>
+  <div id="boot" class="boot" aria-live="polite"><div class="boot-panel"><div class="boot-brand">LUNA // SYSTEM PORTFOLIO</div><div id="bootLog" class="boot-log"></div><div class="boot-bar"><i></i></div></div></div>
+  <div class="cursor-glow" aria-hidden="true"></div>
+  <div id="scrollTrace" class="scroll-trace" aria-hidden="true"></div>
+  <canvas id="pcbCanvas" aria-hidden="true"></canvas>
+
+  <div class="shell">
+    <aside class="sidebar glass">
+      <div class="profile-wrap"><img src="assets/profile/profile.png" alt="Portrait of Luna Nguyen" class="profile-photo"><span class="status-dot" title="Available"></span></div>
+      <p class="eyebrow">SYSTEM OWNER</p><h1>Phuong Uyen<br><span>(Luna) Nguyen</span></h1>
+      <p class="role">Computer Systems Engineering</p><p class="muted">Arizona State University</p>
+      <div class="graduation"><span>EXPECTED GRADUATION</span><strong>May 2027</strong></div>
+      <a class="primary-btn" href="assets/resume/Luna_Nguyen_Resume.pdf" target="_blank" rel="noopener">↗ View Resume</a>
+      <nav class="side-nav" aria-label="Portfolio navigation">
+        <a href="#overview">Overview</a><a href="#projects">Projects</a><a href="#research">Research</a><a href="#experience">Experience</a><a href="#skills">Skills</a><a href="#timeline">Timeline</a><a href="#awards">Awards</a><a href="#contact">Contact</a>
+      </nav>
+      <div class="side-links"><a href="https://github.com/" target="_blank" rel="noopener">GitHub ↗</a><a href="https://www.linkedin.com/in/phuong-uyen-nguyen-7a2a59291/" target="_blank" rel="noopener">LinkedIn ↗</a><a href="mailto:uyenluna18@gmail.com">Email ↗</a></div>
+      <div class="build-status"><div><span>CURRENT BUILD</span><b>Intel Semiconductor Capstone + Hydrophone PCB</b></div><div><span>CURRENT RESEARCH</span><b>Data-efficient agricultural ML</b></div><div><span>STATUS</span><b class="online">● Building / Researching</b></div></div>
+    </aside>
+
+    <main>
+      <section id="hero" class="hero reveal">
+        <p class="eyebrow">CS ENGINEERING // EMBEDDED + RTL + ML</p>
+        <h2>I build systems where <em>software meets hardware.</em></h2>
+        <p class="hero-copy">Computer Systems Engineering student focused on embedded systems, FPGA/RTL, PCB design, computer architecture, machine learning and robotics.</p>
+        <div class="hero-actions"><a class="primary-btn" href="#projects">Explore Projects</a><a class="ghost-btn" href="#contact">Initialize Contact</a></div>
+        <div class="hero-metrics"><div><strong>4.0</strong><span>GPA</span></div><div><strong>6×</strong><span>Dean's List</span></div><div><strong>FURI</strong><span>Researcher</span></div><div><strong>Top 10</strong><span>RoboSub Team</span></div></div>
+      </section>
+
+      <section id="overview" class="section reveal"><div class="section-head"><p class="eyebrow">01 // SYSTEM OVERVIEW</p><h3>Engineering across the stack.</h3></div>
+        <div class="overview-grid">
+          <article class="glass info-card"><span class="chip-icon">µC</span><h4>Embedded Systems</h4><p>Bare-metal ARM Cortex-M0+, I2C sensors, PWM/TPM motor control, GPIO timing and hardware debugging.</p></article>
+          <article class="glass info-card"><span class="chip-icon">RTL</span><h4>Digital Hardware</h4><p>Verilog, Xilinx Vivado and multi-cycle MIPS processor design on Nexys A7 FPGA hardware.</p></article>
+          <article class="glass info-card"><span class="chip-icon">ML</span><h4>Machine Learning</h4><p>PyTorch, TensorFlow, OpenCV, CNNs and U-Net segmentation for computer vision and remote sensing.</p></article>
+          <article class="glass info-card"><span class="chip-icon">SYS</span><h4>Systems</h4><p>Linux kernel modules, gem5 architecture simulation, CUDA kernels and operating-system internals.</p></article>
+        </div>
+      </section>
+
+      <section id="projects" class="section reveal"><div class="section-head split"><div><p class="eyebrow">02 // FEATURED PROJECTS</p><h3>Selected builds.</h3></div><div class="filters" role="group" aria-label="Project filters"><button class="active" data-filter="all">All</button><button data-filter="hardware">Hardware</button><button data-filter="ml">ML</button><button data-filter="systems">Systems</button></div></div>
+        <div class="projects-grid">
+          <article class="project-card glass" data-category="hardware"><div class="project-visual"><img src="assets/projects/hydrophone/hydrophone-schematics.png" alt="Hydrophone PCB schematic" data-lightbox><span class="project-index">P01</span></div><div class="project-body"><div class="tags"><span>PCB</span><span>EasyEDA</span><span>Analog</span></div><h4>Hydrophone PCB</h4><p>Redesigning the hydrophone PCB for Desert WAVE's autonomous underwater vehicle, with schematic capture, fabrication workflow and board-level validation.</p><div class="project-links"><a href="assets/projects/hydrophone/hydrophone-schematics.png" data-lightbox>Photos</a><a href="#" class="disabled">GitHub</a><a href="#" class="disabled">Report</a></div></div></article>
+          <article class="project-card glass" data-category="ml"><div class="project-visual visual-code"><div class="scanlines"></div><code>FTW → U-Net<br>10% 20% 40%<br>60% 80% 100%<br>IoU ↑ labels ↓</code><span class="project-index">P02</span></div><div class="project-body"><div class="tags"><span>PyTorch</span><span>U-Net</span><span>Remote Sensing</span></div><h4>Agricultural Field Segmentation</h4><p>Funded FURI research studying dataset scaling and uncertainty-based active learning on Fields of the World agricultural imagery.</p><div class="project-links"><a href="assets/projects/agricultural-ml/agricultural-field-segmentation-proposal.pdf" target="_blank">PDF</a><a href="#" class="disabled">Code</a><a href="#research">Research</a></div></div></article>
+          <article class="project-card glass" data-category="ml hardware"><div class="project-visual"><img src="assets/projects/robotic-arm/furi-poster.png" alt="FURI robotic arm research poster" data-lightbox><span class="project-index">P03</span></div><div class="project-body"><div class="tags"><span>OpenCV</span><span>TensorFlow</span><span>Raspberry Pi</span></div><h4>AI Robotic Arm</h4><p>Computer-vision robotic manipulation pipeline with CNN-based object recognition and adaptive pick-and-place control, achieving approximately 87% detection accuracy.</p><div class="project-links"><button class="link-button" data-video="assets/projects/robotic-arm/robot-demo.mp4">Demo</button><a href="assets/projects/robotic-arm/robotic-arm-report.pdf" target="_blank">Report</a><a href="assets/projects/robotic-arm/furi-poster.png" data-lightbox>Gallery</a></div></div></article>
+          <article class="project-card glass" data-category="hardware"><div class="project-visual visual-code"><code>FETCH → DECODE<br>EXEC → MEM<br>WRITEBACK<br>always @(posedge clk)</code><span class="project-index">P04</span></div><div class="project-body"><div class="tags"><span>Verilog</span><span>Vivado</span><span>Nexys A7</span></div><h4>Multi-Cycle MIPS FPGA</h4><p>Implemented a multi-cycle MIPS processor in Verilog and deployed the design to a Nexys A7 FPGA board.</p><div class="project-links"><a href="#" class="disabled">GitHub</a><a href="#" class="disabled">Code</a><a href="#" class="disabled">Report</a></div></div></article>
+          <article class="project-card glass" data-category="hardware"><div class="project-visual visual-code"><code>I2C → COLOR<br>TPM2 → PWM<br>GPIO → ECHO<br>PID → MOTORS</code><span class="project-index">P05</span></div><div class="project-body"><div class="tags"><span>ARM Cortex-M0+</span><span>C</span><span>I2C</span></div><h4>Embedded Systems Robots</h4><p>Wall-following and color-sensing robots using FRDM-KL46Z, QRE1113 sensors, HC-SR04 ranging, I2C color detection and TPM motor control.</p><div class="project-links"><a href="#" class="disabled">GitHub</a><a href="#" class="disabled">Code</a><a href="#" class="disabled">Gallery</a></div></div></article>
+          <article class="project-card glass" data-category="systems"><div class="project-visual visual-code"><code>insmod module.ko<br>producer → queue<br>mmap → pages<br>BIO → block dev</code><span class="project-index">P06</span></div><div class="project-body"><div class="tags"><span>Linux</span><span>Kernel</span><span>C</span></div><h4>Linux Kernel Modules</h4><p>Built kernel modules for producer-consumer process monitoring, mmap-like memory allocation and a USB block-device BIO layer.</p><div class="project-links"><a href="#" class="disabled">GitHub</a><a href="#" class="disabled">Code</a><a href="#" class="disabled">Report</a></div></div></article>
+          <article class="project-card glass" data-category="systems hardware"><div class="project-visual visual-code"><div class="scanlines"></div><code>MODULE A ⇄ MODULE B<br>HANDOFF → VERIFY<br>TIMING · SAFETY<br>TOLERANCE · SIGNALS</code><span class="project-index">P07</span></div><div class="project-body"><div class="tags"><span>Intel</span><span>Semiconductor</span><span>Test &amp; Validation</span></div><h4>Semiconductor Equipment Handoff Protocol</h4><p>Intel-sponsored interdisciplinary senior capstone characterizing robotic handoff behavior between modular semiconductor process equipment, including timing, safety, tolerances, positional teaching, interoperability and signal-level test methodology.</p><div class="project-links"><a href="#timeline">Overview</a><span class="confidential-note">Industry-sponsored · Technical details limited</span></div></div></article>
+        </div>
+      </section>
+
+      <section id="research" class="section reveal"><div class="section-head"><p class="eyebrow">03 // RESEARCH</p><h3>Data-efficient intelligence.</h3></div><article class="research-feature glass"><div><span class="live-pill">● ACTIVE // FALL 2026</span><h4>Improving Data Efficiency in Agricultural Field Segmentation</h4><p>Undergraduate Researcher, Kerner Lab · Advisor: Dr. Hannah Kerner</p><p>Testing how training-set size affects field-boundary segmentation performance, then comparing uncertainty-based active learning with random sampling at equal labeling budgets.</p><div class="research-flow"><span>FTW Dataset</span><i>→</i><span>U-Net</span><i>→</i><span>IoU / Precision / Recall</span><i>→</i><span>Active Learning</span></div><a class="ghost-btn" href="assets/projects/agricultural-ml/agricultural-field-segmentation-proposal.pdf" target="_blank">Open Research Proposal ↗</a></div><div class="research-stats"><div><strong>70,462</strong><span>FTW labeled samples</span></div><div><strong>6</strong><span>dataset scales</span></div><div><strong>3</strong><span>evaluation metrics</span></div></div></article></section>
+
+      <section id="experience" class="section reveal"><div class="section-head"><p class="eyebrow">04 // EXPERIENCE</p><h3>Work + engineering leadership.</h3></div><div class="experience-list">
+        <article class="experience-row"><time>2026 — 2027</time><div><h4>Interdisciplinary Senior Capstone · Intel</h4><p>Industry-sponsored capstone characterizing a robotic handoff protocol between modular semiconductor process equipment and developing test methodology and signal-monitoring tools with Intel's standards team.</p></div></article>
+        <article class="experience-row"><time>2026 — NOW</time><div><h4>Electrical Team Member · Desert WAVE</h4><p>ASU RoboSub competition team · Hydrophone PCB redesign, EasyEDA/JLCPCB workflow and computer-vision image annotation support.</p></div></article>
+        <article class="experience-row"><time>2026 — NOW</time><div><h4>PULSE Tutor · Arizona State University</h4><p>Tutor students in mathematics, physics and chemistry while balancing research, capstone and engineering coursework.</p></div></article>
+        <article class="experience-row"><time>2025 — NOW</time><div><h4>Student Worker, Enrollment · ASU EdPlus</h4><p>Audit Salesforce records, manage reporting and spreadsheets, and work in PeopleSoft to maintain enrollment data integrity.</p></div></article>
+        <article class="experience-row"><time>2025</time><div><h4>Team Lead · EPICS</h4><p>Led a seven-member interdisciplinary team building a real-time shelter-capacity tracking system using barcode scanning and Firebase.</p></div></article>
+        <article class="experience-row"><time>2024 — 2025</time><div><h4>Advising Aide · ASU School of Manufacturing Systems & Networks</h4><p>Supported front-desk advising operations and managed Salesforce cases for student services.</p></div></article>
+      </div></section>
+
+      <section id="skills" class="section reveal"><div class="section-head"><p class="eyebrow">05 // SKILL MATRIX</p><h3>Toolchain.</h3></div><div class="skills-grid">
+        <div class="skill-group glass"><h4>Languages</h4><div class="skill-tags"><span>C</span><span>Verilog</span><span>Python</span><span>MIPS Assembly</span><span>Java</span></div></div>
+        <div class="skill-group glass"><h4>Embedded</h4><div class="skill-tags"><span>ARM Cortex-M0+</span><span>I2C</span><span>PWM / TPM</span><span>GPIO</span><span>PID</span><span>FRDM-KL46Z</span></div></div>
+        <div class="skill-group glass"><h4>FPGA / RTL</h4><div class="skill-tags"><span>Vivado</span><span>Nexys A7</span><span>Digital Design</span><span>MIPS</span></div></div>
+        <div class="skill-group glass"><h4>ML / Vision</h4><div class="skill-tags"><span>PyTorch</span><span>TensorFlow</span><span>OpenCV</span><span>CNN</span><span>U-Net</span><span>Roboflow</span></div></div>
+        <div class="skill-group glass"><h4>Systems</h4><div class="skill-tags"><span>Linux</span><span>Kernel Modules</span><span>CUDA</span><span>gem5</span><span>Git</span></div></div>
+        <div class="skill-group glass"><h4>Hardware</h4><div class="skill-tags"><span>EasyEDA</span><span>JLCPCB</span><span>DigiKey</span><span>Multimeter</span><span>Raspberry Pi</span></div></div>
+      </div></section>
+
+      <section id="timeline" class="section reveal"><div class="section-head"><p class="eyebrow">06 // TIMELINE</p><h3>Build history.</h3></div><div class="timeline">
+        <div class="timeline-item"><span>2023</span><div><h4>Engineering Foundation</h4><p>Started at Arizona State University, built early Arduino prototypes and helped create Diego's Journey, a first-prize Hacks for Humanity project.</p></div></div>
+        <div class="timeline-item"><span>2024</span><div><h4>Hardware + Leadership</h4><p>Expanded into electrical fundamentals, engineering design and EPICS; built an award-winning Arduino rain gauge and irrigation-control prototype.</p></div></div>
+        <div class="timeline-item"><span>SPR 2025</span><div><h4>AI + Robotics</h4><p>Conducted FURI robotic-arm research and built a computer-vision pipeline achieving approximately 87% object-detection accuracy.</p></div></div>
+        <div class="timeline-item"><span>FALL 2025</span><div><h4>Digital Systems</h4><p>Deepened work in FPGA/Verilog, circuits and algorithms while leading an EPICS engineering team and beginning work with ASU EdPlus.</p></div></div>
+        <div class="timeline-item"><span>SPR 2026</span><div><h4>Systems Engineering</h4><p>Built across embedded microprocessors, operating systems, computer architecture and machine learning: FRDM-KL46Z robots, Linux kernel modules, MIPS/FPGA, gem5 simulations and CUDA.</p></div></div>
+        <div class="timeline-item"><span>FALL 2026</span><div><h4>Research + Semiconductor Systems</h4><p>Started an Intel-sponsored senior capstone characterizing robotic handoff protocols between modular semiconductor process equipment and developing signal-monitoring and test methodology.</p></div></div>
+        <div class="timeline-item"><span>FALL 2026</span><div><h4>Agricultural ML Research</h4><p>Conducting funded FURI research in the Kerner Lab on data-efficient agricultural field segmentation using U-Net, Fields of the World and dataset-scaling / active-learning experiments.</p></div></div>
+        <div class="timeline-item"><span>FALL 2026</span><div><h4>Autonomous Underwater Systems</h4><p>Joined Desert WAVE's electrical team to redesign the RoboSub hydrophone PCB and support computer-vision dataset annotation.</p></div></div>
+        <div class="timeline-item future"><span>SPR 2027</span><div><h4>Capstone Integration + Validation</h4><p>Continue the Intel-sponsored capstone through characterization, testing, validation and final interdisciplinary engineering deliverables.</p></div></div>
+        <div class="timeline-item future"><span>MAY 2027</span><div><h4>Expected B.S.E. Completion</h4><p>Computer Systems Engineering · Arizona State University.</p></div></div>
+      </div></section>
+
+      <section id="awards" class="section reveal"><div class="section-head"><p class="eyebrow">07 // AWARDS</p><h3>Recognition.</h3></div><div class="award-grid"><article class="glass"><b>FURI</b><h4>Funded Undergraduate Researcher</h4><p>Fall 2026</p></article><article class="glass"><b>6×</b><h4>Dean's List</h4><p>Arizona State University</p></article><article class="glass"><b>01</b><h4>Hacks for Humanity — First Prize</h4><p>Diego's Journey</p></article><article class="glass"><b>ASU</b><h4>New American University Award</h4><p>Scholarship recipient</p></article></div></section>
+
+      <section id="contact" class="section contact reveal"><p class="eyebrow">08 // CONTACT</p><h3>Have a system worth building?</h3><p>I'm interested in embedded systems, FPGA/RTL, computer architecture, ML for real-world systems and research-driven engineering.</p><div class="contact-actions"><a class="primary-btn" href="mailto:uyenluna18@gmail.com">uyenluna18@gmail.com</a><a class="ghost-btn" href="https://www.linkedin.com/in/phuong-uyen-nguyen-7a2a59291/" target="_blank" rel="noopener">LinkedIn ↗</a></div><p class="terminal-hint">Psst — press <kbd>T</kbd> to open the terminal.</p></section>
+      <footer><span>© 2026 Luna Nguyen</span><span>Built with HTML / CSS / JavaScript // GitHub Pages Ready</span></footer>
+    </main>
+  </div>
+
+  <dialog id="lightbox" class="lightbox"><button aria-label="Close gallery">×</button><img alt="Expanded project image"></dialog>
+  <dialog id="videoModal" class="lightbox video-modal"><button aria-label="Close demo">×</button><video controls playsinline></video></dialog>
+  <div id="terminal" class="terminal" hidden><div class="terminal-bar"><span>luna@portfolio:~</span><button id="terminalClose">×</button></div><div id="terminalOutput" class="terminal-output">LUNA ENGINEERING CONSOLE v1.0<br>Type <b>help</b> for commands.</div><label><span>$</span><input id="terminalInput" autocomplete="off" spellcheck="false" aria-label="Terminal command"></label></div>
+</body>
+</html>
