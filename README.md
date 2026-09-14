@@ -1,35 +1,75 @@
-# Portfolio site
+# Luna Nguyen — Engineering Portfolio
 
-Static site, no build step. Two files: `index.html`, `style.css`.
+A zero-framework, GitHub Pages-ready portfolio for **Phuong Uyen (Luna) Nguyen**, Computer Systems Engineering at Arizona State University.
 
-## Deploy on GitHub Pages (free, ~10 min)
+## Deploy on GitHub Pages
 
-1. Create a new GitHub repo named `yourusername.github.io`
-2. Push `index.html` and `style.css` to the root of that repo
-3. Go to Settings → Pages → set source to `main` branch, `/root`
-4. Site is live at `https://yourusername.github.io` within a few minutes
+1. Create a GitHub repository (for a user site, name it `YOUR_USERNAME.github.io`; otherwise any repository name works).
+2. Upload **all files and folders in this project root** to the repository's default branch.
+3. In GitHub, open **Settings → Pages**.
+4. Under **Build and deployment**, choose **Deploy from a branch**.
+5. Select your default branch and `/ (root)`, then save.
+6. GitHub will publish the site automatically.
 
-## Before you publish
+No build step, package manager, Jekyll, React, Bootstrap, or external framework is required.
 
-- Replace the email, GitHub, and LinkedIn links in the Contact section
-- Swap "PROJ-001" descriptions with your own wording once you have a couple
-  sentences of results/specifics for each (numbers, benchmarks, what you'd
-  tell an interviewer)
-- Consider adding a project page per item later (link each project title to
-  a longer write-up) once you have more to show — the current version is a
-  single-page overview, which is the right amount for now
+## Project Structure
 
-## Where to put your "proof" (photos, schematics, code, PDFs)
+```text
+.
+├── index.html
+├── style.css
+├── script.js
+├── README.md
+└── assets/
+    ├── profile/
+    │   └── profile.png
+    ├── resume/
+    │   └── Luna_Nguyen_Resume.pdf
+    └── projects/
+        ├── hydrophone/
+        │   └── hydrophone-schematics.png
+        ├── agricultural-ml/
+        │   └── agricultural-field-segmentation-proposal.pdf
+        ├── robotic-arm/
+        │   ├── furi-poster.png
+        │   ├── robot-demo.mp4
+        │   └── robotic-arm-report.pdf
+        ├── fpga/
+        └── embedded/
+```
 
-Each project has a "Proof: ... →" link with a placeholder `#` href. Two options:
+## Customize Links
 
-1. **In this same repo** (simplest): make a folder like `assets/proj-001/`,
-   drop in your PCB photos, schematic exports, or a short PDF, then point
-   the link at it, e.g. `assets/proj-001/hydrophone-pcb.pdf`.
-2. **Link out to a separate GitHub repo** for anything that's actual code
-   (the FPGA/Verilog files, the U-Net notebook, the firmware). Point the
-   link at that repo's URL instead. This is usually the better call for
-   code specifically — recruiters expect to click through to a real repo,
-   not a code dump pasted into your portfolio.
+Open `index.html` and replace the placeholder GitHub URL (`https://github.com/`) with your exact GitHub profile or project repository URLs. Project buttons intentionally marked unavailable are styled as disabled until you add public links/files.
 
-Mix of both is normal: images/PDFs live in this repo, code links out.
+## Included UI Features
+
+- Dark PCB-inspired engineering interface
+- Responsive sticky profile sidebar
+- Animated circuit-board canvas background
+- Copper and green trace accents
+- Boot sequence animation
+- Cursor glow
+- PCB-style scroll progress indicator
+- Project filtering
+- Scroll reveal animations
+- Project image lightbox
+- Robotic-arm video modal
+- Terminal easter egg: press `T`
+- Mobile-responsive layouts
+- Accessible semantic HTML and reduced dependency surface
+
+## Local Preview
+
+You can open `index.html` directly, or run any simple static server from the project directory. For example, if Python is installed:
+
+```bash
+python -m http.server 8000
+```
+
+Then visit `http://localhost:8000`.
+
+## Notes
+
+All paths are relative, so the portfolio works for both root GitHub Pages sites and project sites. The site has no external JavaScript or CSS dependencies.
